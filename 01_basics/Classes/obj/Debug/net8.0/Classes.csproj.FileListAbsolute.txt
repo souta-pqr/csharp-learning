@@ -1,0 +1,15 @@
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.GeneratedMSBuildEditorConfig.editorconfig
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.AssemblyInfoInputs.cache
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.AssemblyInfo.cs
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.csproj.CoreCompileInputs.cache
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.sourcelink.json
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/bin/Debug/net8.0/Classes
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/bin/Debug/net8.0/Classes.deps.json
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/bin/Debug/net8.0/Classes.runtimeconfig.json
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/bin/Debug/net8.0/Classes.dll
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/bin/Debug/net8.0/Classes.pdb
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.dll
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/refint/Classes.dll
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.pdb
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/Classes.genruntimeconfig.cache
+/home/souta-pqr/work/csharp-learning/01_basics/Classes/obj/Debug/net8.0/ref/Classes.dll
