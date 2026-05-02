@@ -46,13 +46,17 @@ while (true) {
                 Console.WriteLine($"{i + 1}. {todos[i]}");
             }
             Console.Write("削除する番号を入力: ");
-            int index = int.Parse(Console.ReadLine()!) - 1;
-            if (index >= 0 && index < todos.Count) {
-                Console.WriteLine($"「{todos[index]}」を削除しました。");
-                todos.RemoveAt(index);
-                File.WriteAllLines(filePath, todos);
-            } else {
-                Console.WriteLine("無効な番号です。");
+            try {
+                int index = int.Parse(Console.ReadLine()!) - 1;
+                if (index >= 0 && index < todos.Count) {
+                    Console.WriteLine($"「{todos[index]}」を削除しました。");
+                    todos.RemoveAt(index);
+                    File.WriteAllLines(filePath, todos);
+                } else {
+                    Console.WriteLine("無効な番号です。");
+                }
+            } catch (FormatException) {
+                Console.WriteLine("数字を入力してください。");
             }
             break;
 
