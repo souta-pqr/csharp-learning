@@ -1,4 +1,11 @@
+string filePath = "todos.txt";
+
+// 起動時にファイルからTODOを読み込む
 var todos = new List<string>();
+if (File.Exists(filePath)) {
+    todos.AddRange(File.ReadAllLines(filePath));
+    Console.WriteLine($"保存済みのTODOを{todos.Count}件読み込みました。");
+}
 
 while (true) {
     Console.WriteLine("\n=== TODOリスト ===");
@@ -15,6 +22,7 @@ while (true) {
             Console.Write("TODO を入力: ");
             string task = Console.ReadLine()!;
             todos.Add(task);
+            File.WriteAllLines(filePath, todos);
             Console.WriteLine($"「{task}」を追加しました。");
             break;
 
@@ -42,6 +50,7 @@ while (true) {
             if (index >= 0 && index < todos.Count) {
                 Console.WriteLine($"「{todos[index]}」を削除しました。");
                 todos.RemoveAt(index);
+                File.WriteAllLines(filePath, todos);
             } else {
                 Console.WriteLine("無効な番号です。");
             }
