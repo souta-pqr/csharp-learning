@@ -5,7 +5,11 @@ namespace _04_wpf_todo;
 
 class TodoService
 {
-    private readonly string _filePath = "todos.json";
+    private readonly string _filePath = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+        "WpfTodo",
+        "todos.json"
+    );
     private readonly JsonSerializerOptions _options = new() { WriteIndented = true };
 
     public List<TodoItem> Load()
@@ -17,6 +21,7 @@ class TodoService
 
     public void Save(List<TodoItem> todos)
     {
+        Directory.CreateDirectory(Path.GetDirectoryName(_filePath)!);
         File.WriteAllText(_filePath, JsonSerializer.Serialize(todos, _options));
     }
 

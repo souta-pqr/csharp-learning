@@ -1,0 +1,21 @@
+# .NET build outputs
+bin/
+obj/
+publish/
+
+# User-specific files
+*.user
+*.suo
+.vs/
+
+# NuGet
+*.nupkg
+packages/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files generated at runtime
+todos.json
+todos.txt
