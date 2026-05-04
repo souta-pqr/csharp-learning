@@ -1,23 +1,73 @@
 <Window x:Class="_03_wpf_app.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        mc:Ignorable="d"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="Hello WPF" Height="300" Width="400">
-    <StackPanel Margin="20" VerticalAlignment="Center">
-        <TextBlock Text="Hello, WPF World!"
-                   FontSize="24"
-                   HorizontalAlignment="Center"
-                   Margin="0,0,0,20"/>
-        <Button Content="クリックしてね"
-                Width="160"
-                Height="40"
-                FontSize="16"
-                Click="Button_Click"/>
-        <TextBlock x:Name="ResultText"
-                   FontSize="18"
-                   HorizontalAlignment="Center"
-                   Margin="0,20,0,0"/>
-    </StackPanel>
+        Title="電卓" Height="420" Width="300"
+        ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 表示エリア -->
+        <Border Grid.Row="0" Background="#1e1e1e" CornerRadius="6" Margin="0,0,0,10">
+            <TextBlock x:Name="Display"
+                       Text="0"
+                       Foreground="White"
+                       FontSize="36"
+                       FontWeight="Light"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Margin="10,0"/>
+        </Border>
+
+        <!-- ボタングリッド -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 1行目 -->
+            <Button Grid.Row="0" Grid.Column="0" Content="C"  Click="Btn_Click" Tag="C"  Style="{StaticResource FuncBtn}"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="+/-" Click="Btn_Click" Tag="+/-" Style="{StaticResource FuncBtn}"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="%"  Click="Btn_Click" Tag="%"  Style="{StaticResource FuncBtn}"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="÷"  Click="Btn_Click" Tag="/"  Style="{StaticResource OpBtn}"/>
+
+            <!-- 2行目 -->
+            <Button Grid.Row="1" Grid.Column="0" Content="7"  Click="Btn_Click" Tag="7"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="8"  Click="Btn_Click" Tag="8"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="9"  Click="Btn_Click" Tag="9"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="×"  Click="Btn_Click" Tag="*"  Style="{StaticResource OpBtn}"/>
+
+            <!-- 3行目 -->
+            <Button Grid.Row="2" Grid.Column="0" Content="4"  Click="Btn_Click" Tag="4"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="5"  Click="Btn_Click" Tag="5"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="6"  Click="Btn_Click" Tag="6"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="−"  Click="Btn_Click" Tag="-"  Style="{StaticResource OpBtn}"/>
+
+            <!-- 4行目 -->
+            <Button Grid.Row="3" Grid.Column="0" Content="1"  Click="Btn_Click" Tag="1"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="2"  Click="Btn_Click" Tag="2"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="3"  Click="Btn_Click" Tag="3"  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="＋"  Click="Btn_Click" Tag="+"  Style="{StaticResource OpBtn}"/>
+
+            <!-- 5行目 -->
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="Btn_Click" Tag="0" Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="."  Click="Btn_Click" Tag="."  Style="{StaticResource NumBtn}"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="="  Click="Btn_Click" Tag="="  Style="{StaticResource EqBtn}"/>
+        </Grid>
+    </Grid>
 </Window>

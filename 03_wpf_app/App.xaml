@@ -1,9 +1,59 @@
-﻿<Application x:Class="_03_wpf_app.App"
+<Application x:Class="_03_wpf_app.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_03_wpf_app"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- 共通ボタンベース -->
+        <Style x:Key="BaseBtn" TargetType="Button">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Opacity" Value="0.6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- 数字ボタン（ダークグレー） -->
+        <Style x:Key="NumBtn" TargetType="Button" BasedOn="{StaticResource BaseBtn}">
+            <Setter Property="Background" Value="#333333"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- 機能ボタン（ライトグレー） -->
+        <Style x:Key="FuncBtn" TargetType="Button" BasedOn="{StaticResource BaseBtn}">
+            <Setter Property="Background" Value="#a5a5a5"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+
+        <!-- 演算子ボタン（オレンジ） -->
+        <Style x:Key="OpBtn" TargetType="Button" BasedOn="{StaticResource BaseBtn}">
+            <Setter Property="Background" Value="#ff9500"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <!-- イコールボタン（オレンジ） -->
+        <Style x:Key="EqBtn" TargetType="Button" BasedOn="{StaticResource BaseBtn}">
+            <Setter Property="Background" Value="#ff9500"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -18,3 +18,4 @@ C:\Users\borik\Documents\csharp-learning\03_wpf_app\obj\Debug\net10.0-windows\re
 C:\Users\borik\Documents\csharp-learning\03_wpf_app\obj\Debug\net10.0-windows\03_wpf_app.pdb
 C:\Users\borik\Documents\csharp-learning\03_wpf_app\obj\Debug\net10.0-windows\03_wpf_app.genruntimeconfig.cache
 C:\Users\borik\Documents\csharp-learning\03_wpf_app\obj\Debug\net10.0-windows\ref\03_wpf_app.dll
+C:\Users\borik\Documents\csharp-learning\03_wpf_app\obj\Debug\net10.0-windows\App.baml
