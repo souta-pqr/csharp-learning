@@ -1,7 +1,7 @@
 <Window x:Class="_06_adder_visualizer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="2進数加算ビジュアライザ" Height="780" Width="1100"
+        Title="Ripple Carry Adder Visualizer" Height="780" Width="1100"
         Background="#0F0F1A" FontFamily="Consolas">
     <Grid Margin="16">
         <Grid.RowDefinitions>
